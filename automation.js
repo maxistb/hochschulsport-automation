@@ -6,7 +6,7 @@ const password = process.argv[3] || "default_password";
 
 async function automateWebsite() {
   try {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
     await page.goto(
