@@ -6,7 +6,7 @@ const password = process.argv[3] || "default_password";
 
 async function automateWebsite() {
   try {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
 
     await page.goto(
@@ -100,7 +100,7 @@ console.log(
   "Starte die Automatisierung für Handball am Dienstag 21:01 Uhr ..."
 );
 
-const job = schedule.scheduleJob({ hour: 21, minute: 1, dayOfWeek: 2 }, () => {
-  console.log("Starte die Automatisierung...");
+const job = schedule.scheduleJob({ hour: 19, minute: 31, dayOfWeek: 2 }, () => {
   automateWebsite();
+  console.log("Anmeldung erfolgreich!");
 });

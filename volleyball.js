@@ -96,9 +96,9 @@ async function automateWebsite() {
   }
 }
 
-console.log("Starte die Automatisierung für Volleyball Dienstag 19:31 Uhr ...");
+console.log("Starte die Automatisierung für Volleyball Dienstag 18:01 Uhr ...");
 
-const job = schedule.scheduleJob({ hour: 19, minute: 31, dayOfWeek: 2 }, () => {
-  console.log("Starte die Automatisierung...");
+const job = schedule.scheduleJob({ hour: 18, minute: 1, dayOfWeek: 2 }, () => {
   automateWebsite();
+  console.log("Anmeldung erfolgreich!");
 });
