@@ -33,18 +33,21 @@ Bevor du das Projekt installierst, stelle sicher, dass du die folgenden Vorausse
 Dies installiert alle notwendigen Abhängigkeiten, wie **Puppeteer** und **node-schedule**.
 
 ## Verwendung
+Dieses Skript startet einen Prozess, welcher durchgehend läuft (bis man zum Modul angemeldet ist) und dann zur bestimmten Zeit sich für den Hochschulsport anmeldet. Man muss also dafür sorgen, dass auch im Standby dieser Prozess laufen kann.
+Dies tut man mit dem Befehl "caffeinate" auf macOS.
+
 Es gibt vorbereitete Skrips für Handball und Volleyball. Diese erwarten die Übergabe von E-Mail und Passwort für die Anmeldung. Es kann wie folgt aufgerufen werden:
 
 ```bash
-node volleyball.js <deine-email> <dein-passwort>
-node handball.js <deine-email> <dein-passwort>
+caffeinate node volleyball.js <deine-email> <dein-passwort>
+caffeinate node handball.js <deine-email> <dein-passwort>
 ```
 
 ### Custom Kurse und Zeiten
 Bei Nutzung für andere Kurse kann man Parameter übergeben, wie folgt:
 
 ```bash
-node custom.js <deine-email> <dein-passwort> <stunde> <minute> <wochentag> <link-zur-sportart> <selektor-fuer-button-zum-kurs>
+caffeinate node custom.js <deine-email> <dein-passwort> <stunde> <minute> <wochentag> <link-zur-sportart> <selektor-fuer-button-zum-kurs>
 ```
 
 
