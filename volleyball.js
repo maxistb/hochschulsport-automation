@@ -91,6 +91,7 @@ async function automateWebsite() {
     );
 
     await newPage.click("#bs_foot > div.bs_form_row > div.bs_right > input");
+    await browser.close();
   } catch (error) {
     console.error("Fehler während der Automatisierung:", error);
   }

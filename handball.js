@@ -91,13 +91,14 @@ async function automateWebsite() {
     );
 
     await newPage.click("#bs_foot > div.bs_form_row > div.bs_right > input");
+    await browser.close();
   } catch (error) {
     console.error("Fehler während der Automatisierung:", error);
   }
 }
 
 console.log(
-  "Starte die Automatisierung für Handball am Dienstag 21:01 Uhr ..."
+  "Starte die Automatisierung für Handball am Dienstag 19:31 Uhr ..."
 );
 
 const job = schedule.scheduleJob({ hour: 19, minute: 31, dayOfWeek: 2 }, () => {
